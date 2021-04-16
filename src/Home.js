@@ -1,5 +1,7 @@
-import { useState } from "react";
+// import { useEffect, useState } from "react";
+
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
     // const [name,setName] = useState('mario');
@@ -9,19 +11,21 @@ const Home = () => {
     //     setName('peach');
     //     setAge(420);
     // }
-    const [blogs,setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ]);
+    const {data: blogs, isPending, error} = useFetch('http://localhost:8000/blogs');
+    // const [name,setName] = useState('Durvesh');
     // const handleClickAgain = (name,e) => {
     //     console.log("hellooo ",name,e);
     // }
 
-    const handleDelete = (id) => {
-        const newblogs = blogs.filter(blog=>blog.id!==id);
-        setBlogs(newblogs);
-    }
+
+    // const handleDelete = (id) => {
+    //     const newblogs = blogs.filter(blog=>blog.id!==id);
+    //     setBlogs(newblogs);
+    //     // setName('Bruh')
+    // }
+
+
+
 
     return (
         <div className="home">
@@ -31,7 +35,10 @@ const Home = () => {
                     <p className="previewAuthor">Written by {blog.author}</p>
                 </div>
             ))} */}
-            <BlogList blogs = {blogs} title= "All Blogs" handleDelete={handleDelete}/>
+            { error && <div>{error}</div>}
+            { isPending && <div>Loading...</div>}
+            { blogs && <BlogList blogs = {blogs} title= "All Blogs"/>}
+            {/* { blogs && <BlogList blogs = {blogs} title= "All Blogs" handleDelete={handleDelete}/>} */}
             {/* <BlogList blogs = {blogs.filter((blog)=>blog.author==="mario")} title= "Mario's blogs"/> */}
             {/* <h2>Homepage</h2>
             <p>{name} is {age} years old</p>
