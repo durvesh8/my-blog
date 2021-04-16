@@ -35,6 +35,7 @@ const Home = () => {
                     <p className="previewAuthor">Written by {blog.author}</p>
                 </div>
             ))} */}
+            <h1>Oh hello</h1>
             { error && <div>{error}</div>}
             { isPending && <div>Loading...</div>}
             { blogs && <BlogList blogs = {blogs} title= "All Blogs"/>}

@@ -10,7 +10,7 @@ function App() {
   // const title = "Durvesh's Blog";
   // const link = "https://github.com"
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Navbar/>
         
