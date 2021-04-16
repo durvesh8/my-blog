@@ -11,7 +11,7 @@ const Home = () => {
     //     setName('peach');
     //     setAge(420);
     // }
-    const {data: blogs, isPending, error} = useFetch('http://localhost:8000/blogs');
+    const {data: blogs, isPending, error} = useFetch('https://durvesh8.github.io/my-blog/data/db.json');
     // const [name,setName] = useState('Durvesh');
     // const handleClickAgain = (name,e) => {
     //     console.log("hellooo ",name,e);

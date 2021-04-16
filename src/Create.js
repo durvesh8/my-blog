@@ -11,17 +11,17 @@ const Create = () => {
       e.preventDefault();
       const blog = {title , body, author};
       setIsPending(true);
-      fetch('http://localhost:8000/blogs',{
-        method: 'POST', headers: {
-          "Content-type": "application/json"
-        },
-        body: JSON.stringify(blog)
-      }).then(()=>{
-        setIsPending(false);
-        // history.go(-1);
-        history.push('/');
-      }
-      )
+      // fetch('http://localhost:8000/blogs',{
+      //   method: 'POST', headers: {
+      //     "Content-type": "application/json"
+      //   },
+      //   body: JSON.stringify(blog)
+      // }).then(()=>{
+      //   setIsPending(false);
+      //   // history.go(-1);
+      //   history.push('/');
+      // }
+      // )
     }
     
     return (
