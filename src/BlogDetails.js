@@ -4,8 +4,10 @@ import useFetch from "./useFetch";
 
 const BlogDetails = () => {
 
-    const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('http://durvesh8.github.io/my-blog/data/db.json/' + id);
+    const { id : blogId } = useParams();
+    const { data: blogs, error, isPending } = useFetch('https://raw.githubusercontent.com/durvesh8/my-blog/main/data/db.json');
+    
+
     const history = useHistory();
 
     const handleClick = () =>{
@@ -14,6 +16,17 @@ const BlogDetails = () => {
         // }).then(()=>{
         //     history.push('/');
         // })
+    }
+    const filterBlog = (singleblog) => {
+        console.log(singleblog);
+        return singleblog.id == blogId;
+    }
+
+    const getBlog = (allBlogs) => {
+        console.log(allBlogs);
+        const retBlog = allBlogs.filter(filterBlog);
+        console.log(retBlog);
+        return retBlog[0];
     }
 
     return ( 
@@ -25,15 +38,19 @@ const BlogDetails = () => {
                 error && <div> Well somehow this error occured:- {error.message} </div>
             }
             {
-                blog && (
+                blogs
+                && ( 
+                    
                 <article>
                     <div className="bloghead">
                         <h2>
-                            {blog.title}
+                            {getBlog(blogs).title}
                         </h2>
                     </div>
                     <div>
-                        {blog.body}
+                        {
+                        getBlog(blogs).body
+                        }
                     </div>
                     <button onClick={handleClick} >delete</button>
                 </article>
