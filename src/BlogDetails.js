@@ -11,7 +11,7 @@ const BlogDetails = () => {
     const history = useHistory();
 
     const handleClick = () =>{
-        // fetch('http://localhost:8000/blogs/'+blog.id,{
+        // fetch('http://localhost:8000/blogs/'+getBlog(blogs).id,{
         //     method: 'DELETE'
         // }).then(()=>{
         //     history.push('/');
@@ -52,7 +52,7 @@ const BlogDetails = () => {
                         getBlog(blogs).body
                         }
                     </div>
-                    <button onClick={handleClick} >delete</button>
+                    {/* <button onClick={handleClick} >delete</button> */}
                 </article>
                 )
             }

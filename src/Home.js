@@ -35,10 +35,10 @@ const Home = () => {
                     <p className="previewAuthor">Written by {blog.author}</p>
                 </div>
             ))} */}
-            <h1>Oh hello</h1>
+            <h1>Some crispy blogs right below this 👇</h1>
             { error && <div>{error}</div>}
             { isPending && <div>Loading...</div>}
-            { blogs && <BlogList blogs = {blogs} title= "All Blogs"/>}
+            { blogs && <BlogList blogs = {blogs} title= "=>All Blogs<="/>}
             {/* { blogs && <BlogList blogs = {blogs} title= "All Blogs" handleDelete={handleDelete}/>} */}
             {/* <BlogList blogs = {blogs.filter((blog)=>blog.author==="mario")} title= "Mario's blogs"/> */}
             {/* <h2>Homepage</h2>
