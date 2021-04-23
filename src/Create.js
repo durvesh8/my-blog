@@ -54,7 +54,7 @@ const Create = () => {
           }
           { isPending &&
             <button type='submit' disabled>
-              Adding Blog...
+              This won't work as the data is static as of now🙃
             </button>
           }
         </form>

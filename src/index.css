@@ -77,6 +77,15 @@
 .blog-details div {
   margin: 20px 0;
 }
+.blogbody{
+  white-space: pre-line;
+  font-size: large;
+}
+
+.loading{
+  font-size: xx-large;
+}
+
 .blog-details button {
   background: #e76F51;
   color: #fff;

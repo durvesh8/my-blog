@@ -1,8 +1,15 @@
 [
   {
     "title": "My Web development journey",
-    "body": "Web development has always been very fascinating to me.\nMany people's lives are based on this technology.\nI am currently learning the MERN stack.\nAs I'm still new to this, I'll keep my blog short and keep updating over time.\n\nThese are the resources I referred to:\n(I'm still working on getting these links to point to the website as this data is stored in JSON. I'll most probably use markdown to latex.)\n\nHTML Crash Course:  https://www.youtube.com/watch?v=UB1O30fR-EE\n\nCSS Crash Course:  https://www.youtube.com/watch?v=yfoY53QXEnI\n\nJavascript Playlist:  https://www.youtube.com/playlist?list=PLlmE1rs89GfJx3nvnlVhZGwtsigUER41p\n(This playlist was made by my friend Tanmay who is a fellow web developer from my Undergrad College)\n\n\nReact:  https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d\n\n\nMongoDB:  Learnt this through college course. I will try to find a good playlist and add it here.\n\nNode and Express:  Haven't yet learnt as of 23rd April 2021 :)",
+    "body": "Web development has always been very fascinating to me.\nI am currently learning the MERN stack.\nAs I'm still new to this, I'll keep my blog short and keep updating over time.\n\nThese are the resources I referred to:\n(I'm still working on getting these links to point to the website as this data is stored in JSON. I'll most probably use markdown to latex.)\n\nHTML Crash Course:  https://www.youtube.com/watch?v=UB1O30fR-EE\n\nCSS Crash Course:  https://www.youtube.com/watch?v=yfoY53QXEnI\n\nJavascript Playlist:  https://www.youtube.com/playlist?list=PLlmE1rs89GfJx3nvnlVhZGwtsigUER41p\n(This playlist was made by my friend Tanmay who is a fellow web developer from my Undergrad College)\n\n\nReact:  https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d\n\n\nMongoDB:  Learnt this through college course. I will try to find a good playlist and add it here.\n\nNode and Express:  Haven't yet learnt as of 23rd April 2021 :)",
     "author": "Durvesh",
     "id": 1
+  },
+  {
+    "title": "The Second Blog",
+    "body": "This is just another blog for testing purposes ^_^",
+    "author": "Durvesh",
+    "id": 2
   }
 ]
+

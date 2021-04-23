@@ -26,13 +26,14 @@ const BlogDetails = () => {
         console.log(allBlogs);
         const retBlog = allBlogs.filter(filterBlog);
         console.log(retBlog);
+        console.log(retBlog[0].body)
         return retBlog[0];
     }
 
     return ( 
         <div className="blog-details">
             {
-                isPending && <div>Loading the freshly fetched blog... 😋</div>
+                isPending && <div className="loading">Loading the freshly fetched blog... 😋</div>
             }
             {
                 error && <div> Well somehow this error occured:- {error.message} </div>
@@ -43,12 +44,13 @@ const BlogDetails = () => {
                     
                 <article>
                     <div className="bloghead">
-                        <h2>
+                        <h1>
                             {getBlog(blogs).title}
-                        </h2>
+                        </h1>
                     </div>
-                    <div>
+                    <div className="blogbody">
                         {
+                            
                         getBlog(blogs).body
                         }
                     </div>
